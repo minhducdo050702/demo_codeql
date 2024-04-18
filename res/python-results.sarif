@@ -1,0 +1,844 @@
+{
+  "$schema" : "https://json.schemastore.org/sarif-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "CodeQL",
+        "organization" : "GitHub",
+        "semanticVersion" : "2.17.0",
+        "notifications" : [ {
+          "id" : "py/baseline/expected-extracted-files",
+          "name" : "py/baseline/expected-extracted-files",
+          "shortDescription" : {
+            "text" : "Expected extracted files"
+          },
+          "fullDescription" : {
+            "text" : "Files appearing in the source archive that are expected to be extracted."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true
+          },
+          "properties" : {
+            "tags" : [ "expected-extracted-files", "telemetry" ]
+          }
+        } ],
+        "rules" : [ {
+          "id" : "py/super-not-enclosing-class",
+          "name" : "py/super-not-enclosing-class",
+          "shortDescription" : {
+            "text" : "First argument to super() is not enclosing class"
+          },
+          "fullDescription" : {
+            "text" : "Calling super with something other than the enclosing class may cause incorrect object initialization."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "maintainability", "convention", "external/cwe/cwe-687" ],
+            "description" : "Calling super with something other than the enclosing class may cause incorrect object initialization.",
+            "id" : "py/super-not-enclosing-class",
+            "kind" : "problem",
+            "name" : "First argument to super() is not enclosing class",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/comparison-of-constants",
+          "name" : "py/comparison-of-constants",
+          "shortDescription" : {
+            "text" : "Comparison of constants"
+          },
+          "fullDescription" : {
+            "text" : "Comparison of constants is always constant, but is harder to read than a simple constant."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "maintainability", "useless-code", "external/cwe/cwe-570", "external/cwe/cwe-571" ],
+            "description" : "Comparison of constants is always constant, but is harder to read than a simple constant.",
+            "id" : "py/comparison-of-constants",
+            "kind" : "problem",
+            "name" : "Comparison of constants",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/comparison-of-identical-expressions",
+          "name" : "py/comparison-of-identical-expressions",
+          "shortDescription" : {
+            "text" : "Comparison of identical values"
+          },
+          "fullDescription" : {
+            "text" : "Comparison of identical values, the intent of which is unclear."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness", "readability", "convention", "external/cwe/cwe-570", "external/cwe/cwe-571" ],
+            "description" : "Comparison of identical values, the intent of which is unclear.",
+            "id" : "py/comparison-of-identical-expressions",
+            "kind" : "problem",
+            "name" : "Comparison of identical values",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/comparison-missing-self",
+          "name" : "py/comparison-missing-self",
+          "shortDescription" : {
+            "text" : "Maybe missing 'self' in comparison"
+          },
+          "fullDescription" : {
+            "text" : "Comparison of identical values, the intent of which is unclear."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "maintainability", "external/cwe/cwe-570", "external/cwe/cwe-571" ],
+            "description" : "Comparison of identical values, the intent of which is unclear.",
+            "id" : "py/comparison-missing-self",
+            "kind" : "problem",
+            "name" : "Maybe missing 'self' in comparison",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/redundant-comparison",
+          "name" : "py/redundant-comparison",
+          "shortDescription" : {
+            "text" : "Redundant comparison"
+          },
+          "fullDescription" : {
+            "text" : "The result of a comparison is implied by a previous comparison."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "useless-code", "external/cwe/cwe-561", "external/cwe/cwe-570", "external/cwe/cwe-571" ],
+            "description" : "The result of a comparison is implied by a previous comparison.",
+            "id" : "py/redundant-comparison",
+            "kind" : "problem",
+            "name" : "Redundant comparison",
+            "precision" : "high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/member-test-non-container",
+          "name" : "py/member-test-non-container",
+          "shortDescription" : {
+            "text" : "Membership test with a non-container"
+          },
+          "fullDescription" : {
+            "text" : "A membership test, such as 'item in sequence', with a non-container on the right hand side will raise a 'TypeError'."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "A membership test, such as 'item in sequence', with a non-container on the right hand side will raise a 'TypeError'.",
+            "id" : "py/member-test-non-container",
+            "kind" : "problem",
+            "name" : "Membership test with a non-container",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/duplicate-key-dict-literal",
+          "name" : "py/duplicate-key-dict-literal",
+          "shortDescription" : {
+            "text" : "Duplicate key in dict literal"
+          },
+          "fullDescription" : {
+            "text" : "Duplicate key in dict literal. All but the last will be lost."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "useless-code", "external/cwe/cwe-561" ],
+            "description" : "Duplicate key in dict literal. All but the last will be lost.",
+            "id" : "py/duplicate-key-dict-literal",
+            "kind" : "problem",
+            "name" : "Duplicate key in dict literal",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/test-equals-none",
+          "name" : "py/test-equals-none",
+          "shortDescription" : {
+            "text" : "Testing equality to None"
+          },
+          "fullDescription" : {
+            "text" : "Testing whether an object is 'None' using the == operator is inefficient and potentially incorrect."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "note"
+          },
+          "properties" : {
+            "tags" : [ "efficiency", "maintainability" ],
+            "description" : "Testing whether an object is 'None' using the == operator is inefficient and potentially incorrect.",
+            "id" : "py/test-equals-none",
+            "kind" : "problem",
+            "name" : "Testing equality to None",
+            "precision" : "very-high",
+            "problem.severity" : "recommendation",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/percent-format/not-mapping",
+          "name" : "py/percent-format/not-mapping",
+          "shortDescription" : {
+            "text" : "Formatted object is not a mapping"
+          },
+          "fullDescription" : {
+            "text" : "The formatted object must be a mapping when the format includes a named specifier; otherwise a TypeError will be raised.\""
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "The formatted object must be a mapping when the format includes a named specifier; otherwise a TypeError will be raised.\"",
+            "id" : "py/percent-format/not-mapping",
+            "kind" : "problem",
+            "name" : "Formatted object is not a mapping",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/explicit-call-to-delete",
+          "name" : "py/explicit-call-to-delete",
+          "shortDescription" : {
+            "text" : "`__del__` is called explicitly"
+          },
+          "fullDescription" : {
+            "text" : "The `__del__` special method is called by the virtual machine when an object is being finalized. It should not be called explicitly."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "The `__del__` special method is called by the virtual machine when an object is being finalized. It should not be called explicitly.",
+            "id" : "py/explicit-call-to-delete",
+            "kind" : "problem",
+            "name" : "`__del__` is called explicitly",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/str-format/mixed-fields",
+          "name" : "py/str-format/mixed-fields",
+          "shortDescription" : {
+            "text" : "Formatting string mixes implicitly and explicitly numbered fields"
+          },
+          "fullDescription" : {
+            "text" : "Using implicit and explicit numbering in string formatting operations, such as '\"{}: {1}\".format(a,b)', will raise a ValueError."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "Using implicit and explicit numbering in string formatting operations, such as '\"{}: {1}\".format(a,b)', will raise a ValueError.",
+            "id" : "py/str-format/mixed-fields",
+            "kind" : "problem",
+            "name" : "Formatting string mixes implicitly and explicitly numbered fields",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/str-format/surplus-argument",
+          "name" : "py/str-format/surplus-argument",
+          "shortDescription" : {
+            "text" : "Unused argument in a formatting call"
+          },
+          "fullDescription" : {
+            "text" : "Including surplus arguments in a formatting call makes code more difficult to read and may indicate an error."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "maintainability", "useless-code" ],
+            "description" : "Including surplus arguments in a formatting call makes code more difficult to read and may indicate an error.",
+            "id" : "py/str-format/surplus-argument",
+            "kind" : "problem",
+            "name" : "Unused argument in a formatting call",
+            "precision" : "high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/str-format/surplus-named-argument",
+          "name" : "py/str-format/surplus-named-argument",
+          "shortDescription" : {
+            "text" : "Unused named argument in formatting call"
+          },
+          "fullDescription" : {
+            "text" : "Including surplus keyword arguments in a formatting call makes code more difficult to read and may indicate an error."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "maintainability", "useless-code" ],
+            "description" : "Including surplus keyword arguments in a formatting call makes code more difficult to read and may indicate an error.",
+            "id" : "py/str-format/surplus-named-argument",
+            "kind" : "problem",
+            "name" : "Unused named argument in formatting call",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/str-format/missing-named-argument",
+          "name" : "py/str-format/missing-named-argument",
+          "shortDescription" : {
+            "text" : "Missing named arguments in formatting call"
+          },
+          "fullDescription" : {
+            "text" : "A string formatting operation, such as '\"{name}\".format(key=b)', where the names of format items in the format string differs from the names of the values to be formatted will raise a KeyError."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "A string formatting operation, such as '\"{name}\".format(key=b)',\n              where the names of format items in the format string differs from the names of the values to be formatted will raise a KeyError.",
+            "id" : "py/str-format/missing-named-argument",
+            "kind" : "problem",
+            "name" : "Missing named arguments in formatting call",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/str-format/missing-argument",
+          "name" : "py/str-format/missing-argument",
+          "shortDescription" : {
+            "text" : "Too few arguments in formatting call"
+          },
+          "fullDescription" : {
+            "text" : "A string formatting operation, such as '\"{0}: {1}, {2}\".format(a,b)', where the number of values to be formatted is too few for the format string will raise an IndexError."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "A string formatting operation, such as '\"{0}: {1}, {2}\".format(a,b)',\n              where the number of values to be formatted is too few for the format string will raise an IndexError.",
+            "id" : "py/str-format/missing-argument",
+            "kind" : "problem",
+            "name" : "Too few arguments in formatting call",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/hash-unhashable-value",
+          "name" : "py/hash-unhashable-value",
+          "shortDescription" : {
+            "text" : "Unhashable object hashed"
+          },
+          "fullDescription" : {
+            "text" : "Hashing an object which is not hashable will result in a TypeError at runtime."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "Hashing an object which is not hashable will result in a TypeError at runtime.",
+            "id" : "py/hash-unhashable-value",
+            "kind" : "problem",
+            "name" : "Unhashable object hashed",
+            "precision" : "very-high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/comparison-using-is",
+          "name" : "py/comparison-using-is",
+          "shortDescription" : {
+            "text" : "Comparison using is when operands support `__eq__`"
+          },
+          "fullDescription" : {
+            "text" : "Comparison using 'is' when equivalence is not the same as identity"
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "Comparison using 'is' when equivalence is not the same as identity",
+            "id" : "py/comparison-using-is",
+            "kind" : "problem",
+            "name" : "Comparison using is when operands support `__eq__`",
+            "precision" : "high",
+            "problem.severity" : "warning",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/call-to-non-callable",
+          "name" : "py/call-to-non-callable",
+          "shortDescription" : {
+            "text" : "Non-callable called"
+          },
+          "fullDescription" : {
+            "text" : "A call to an object which is not a callable will raise a TypeError at runtime."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness", "types" ],
+            "description" : "A call to an object which is not a callable will raise a TypeError at runtime.",
+            "id" : "py/call-to-non-callable",
+            "kind" : "problem",
+            "name" : "Non-callable called",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/comparison-using-is-non-portable",
+          "name" : "py/comparison-using-is-non-portable",
+          "shortDescription" : {
+            "text" : "Non-portable comparison using is when operands support `__eq__`"
+          },
+          "fullDescription" : {
+            "text" : "Comparison using 'is' when equivalence is not the same as identity and may not be portable."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "note"
+          },
+          "properties" : {
+            "tags" : [ "portability", "maintainability" ],
+            "description" : "Comparison using 'is' when equivalence is not the same as identity and may not be portable.",
+            "id" : "py/comparison-using-is-non-portable",
+            "kind" : "problem",
+            "name" : "Non-portable comparison using is when operands support `__eq__`",
+            "precision" : "medium",
+            "problem.severity" : "recommendation",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/regex/backspace-escape",
+          "name" : "py/regex/backspace-escape",
+          "shortDescription" : {
+            "text" : "Backspace escape in regular expression"
+          },
+          "fullDescription" : {
+            "text" : "Using '\\b' to escape the backspace character in a regular expression is confusing since it could be mistaken for a word boundary assertion."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "note"
+          },
+          "properties" : {
+            "tags" : [ "maintainability" ],
+            "description" : "Using '\\b' to escape the backspace character in a regular expression is confusing\n              since it could be mistaken for a word boundary assertion.",
+            "id" : "py/regex/backspace-escape",
+            "kind" : "problem",
+            "name" : "Backspace escape in regular expression",
+            "precision" : "very-high",
+            "problem.severity" : "recommendation",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/regex/duplicate-in-character-class",
+          "name" : "py/regex/duplicate-in-character-class",
+          "shortDescription" : {
+            "text" : "Duplication in regular expression character class"
+          },
+          "fullDescription" : {
+            "text" : "Duplicate characters in a class have no effect and may indicate an error in the regular expression."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "readability" ],
+            "description" : "Duplicate characters in a class have no effect and may indicate an error in the regular expression.",
+            "id" : "py/regex/duplicate-in-character-class",
+            "kind" : "problem",
+            "name" : "Duplication in regular expression character class",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/regex/incomplete-special-group",
+          "name" : "py/regex/incomplete-special-group",
+          "shortDescription" : {
+            "text" : "Missing part of special group in regular expression"
+          },
+          "fullDescription" : {
+            "text" : "Incomplete special groups are parsed as normal groups and are unlikely to match the intended strings."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "Incomplete special groups are parsed as normal groups and are unlikely to match the intended strings.",
+            "id" : "py/regex/incomplete-special-group",
+            "kind" : "problem",
+            "name" : "Missing part of special group in regular expression",
+            "precision" : "high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/regex/unmatchable-caret",
+          "name" : "py/regex/unmatchable-caret",
+          "shortDescription" : {
+            "text" : "Unmatchable caret in regular expression"
+          },
+          "fullDescription" : {
+            "text" : "Regular expressions containing a caret '^' in the middle cannot be matched, whatever the input."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "Regular expressions containing a caret '^' in the middle cannot be matched, whatever the input.",
+            "id" : "py/regex/unmatchable-caret",
+            "kind" : "problem",
+            "name" : "Unmatchable caret in regular expression",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/regex/unmatchable-dollar",
+          "name" : "py/regex/unmatchable-dollar",
+          "shortDescription" : {
+            "text" : "Unmatchable dollar in regular expression"
+          },
+          "fullDescription" : {
+            "text" : "Regular expressions containing a dollar '$' in the middle cannot be matched, whatever the input."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "Regular expressions containing a dollar '$' in the middle cannot be matched, whatever the input.",
+            "id" : "py/regex/unmatchable-dollar",
+            "kind" : "problem",
+            "name" : "Unmatchable dollar in regular expression",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/truncated-division",
+          "name" : "py/truncated-division",
+          "shortDescription" : {
+            "text" : "Result of integer division may be truncated"
+          },
+          "fullDescription" : {
+            "text" : "The arguments to a division statement may be integers, which may cause the result to be truncated in Python 2."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "maintainability", "correctness" ],
+            "description" : "The arguments to a division statement may be integers, which\n              may cause the result to be truncated in Python 2.",
+            "id" : "py/truncated-division",
+            "kind" : "problem",
+            "name" : "Result of integer division may be truncated",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/implicit-string-concatenation-in-list",
+          "name" : "py/implicit-string-concatenation-in-list",
+          "shortDescription" : {
+            "text" : "Implicit string concatenation in a list"
+          },
+          "fullDescription" : {
+            "text" : "Omitting a comma between strings causes implicit concatenation which is confusing in a list."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "maintainability", "convention", "external/cwe/cwe-665" ],
+            "description" : "Omitting a comma between strings causes implicit concatenation which is confusing in a list.",
+            "id" : "py/implicit-string-concatenation-in-list",
+            "kind" : "problem",
+            "name" : "Implicit string concatenation in a list",
+            "precision" : "high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/unnecessary-lambda",
+          "name" : "py/unnecessary-lambda",
+          "shortDescription" : {
+            "text" : "Unnecessary lambda"
+          },
+          "fullDescription" : {
+            "text" : "A lambda is used that calls through to a function without modifying any parameters"
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "note"
+          },
+          "properties" : {
+            "tags" : [ "maintainability", "useless-code" ],
+            "description" : "A lambda is used that calls through to a function without modifying any parameters",
+            "id" : "py/unnecessary-lambda",
+            "kind" : "problem",
+            "name" : "Unnecessary lambda",
+            "precision" : "high",
+            "problem.severity" : "recommendation",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/percent-format/unsupported-character",
+          "name" : "py/percent-format/unsupported-character",
+          "shortDescription" : {
+            "text" : "Unsupported format character"
+          },
+          "fullDescription" : {
+            "text" : "An unsupported format character in a format string"
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness" ],
+            "description" : "An unsupported format character in a format string",
+            "id" : "py/percent-format/unsupported-character",
+            "kind" : "problem",
+            "name" : "Unsupported format character",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/use-of-apply",
+          "name" : "py/use-of-apply",
+          "shortDescription" : {
+            "text" : "'apply' function used"
+          },
+          "fullDescription" : {
+            "text" : "The builtin function 'apply' is obsolete and should not be used."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "maintainability" ],
+            "description" : "The builtin function 'apply' is obsolete and should not be used.",
+            "id" : "py/use-of-apply",
+            "kind" : "problem",
+            "name" : "'apply' function used",
+            "precision" : "very-high",
+            "problem.severity" : "warning",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/use-of-input",
+          "name" : "py/use-of-input",
+          "shortDescription" : {
+            "text" : "'input' function used in Python 2"
+          },
+          "fullDescription" : {
+            "text" : "The built-in function 'input' is used which, in Python 2, can allow arbitrary code to be run."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "correctness", "security/cwe/cwe-94", "security/cwe/cwe-95" ],
+            "description" : "The built-in function 'input' is used which, in Python 2, can allow arbitrary code to be run.",
+            "id" : "py/use-of-input",
+            "kind" : "problem",
+            "name" : "'input' function used in Python 2",
+            "precision" : "high",
+            "problem.severity" : "error",
+            "security-severity" : "9.8",
+            "sub-severity" : "high"
+          }
+        }, {
+          "id" : "py/call/wrong-named-argument",
+          "name" : "py/call/wrong-named-argument",
+          "shortDescription" : {
+            "text" : "Wrong name for an argument in a call"
+          },
+          "fullDescription" : {
+            "text" : "Using a named argument whose name does not correspond to a parameter of the called function or method, will result in a TypeError at runtime."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness", "external/cwe/cwe-628" ],
+            "description" : "Using a named argument whose name does not correspond to a\n              parameter of the called function or method, will result in a\n              TypeError at runtime.",
+            "id" : "py/call/wrong-named-argument",
+            "kind" : "problem",
+            "name" : "Wrong name for an argument in a call",
+            "precision" : "very-high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/percent-format/wrong-arguments",
+          "name" : "py/percent-format/wrong-arguments",
+          "shortDescription" : {
+            "text" : "Wrong number of arguments for format"
+          },
+          "fullDescription" : {
+            "text" : "A string formatting operation, such as '\"%s: %s, %s\" % (a,b)', where the number of conversion specifiers in the format string differs from the number of values to be formatted will raise a TypeError."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness", "external/cwe/cwe-685" ],
+            "description" : "A string formatting operation, such as '\"%s: %s, %s\" % (a,b)', where the number of conversion specifiers in the\n              format string differs from the number of values to be formatted will raise a TypeError.",
+            "id" : "py/percent-format/wrong-arguments",
+            "kind" : "problem",
+            "name" : "Wrong number of arguments for format",
+            "precision" : "very-high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        }, {
+          "id" : "py/call/wrong-arguments",
+          "name" : "py/call/wrong-arguments",
+          "shortDescription" : {
+            "text" : "Wrong number of arguments in a call"
+          },
+          "fullDescription" : {
+            "text" : "Using too many or too few arguments in a call to a function will result in a TypeError at runtime."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "correctness", "external/cwe/cwe-685" ],
+            "description" : "Using too many or too few arguments in a call to a function will result in a TypeError at runtime.",
+            "id" : "py/call/wrong-arguments",
+            "kind" : "problem",
+            "name" : "Wrong number of arguments in a call",
+            "precision" : "very-high",
+            "problem.severity" : "error",
+            "sub-severity" : "low"
+          }
+        } ]
+      },
+      "extensions" : [ {
+        "name" : "codeql/python-queries",
+        "semanticVersion" : "0.9.13+839ca60f90f918b567e192642b0cc3003803f482",
+        "locations" : [ {
+          "uri" : "file:///C:/Users/minhd/.codeql/packages/codeql/python-queries/0.9.13/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///C:/Users/minhd/.codeql/packages/codeql/python-queries/0.9.13/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      } ]
+    },
+    "invocations" : [ {
+      "toolExecutionNotifications" : [ {
+        "locations" : [ {
+          "physicalLocation" : {
+            "artifactLocation" : {
+              "uri" : "demo.py",
+              "uriBaseId" : "%SRCROOT%",
+              "index" : 0
+            }
+          }
+        } ],
+        "message" : {
+          "text" : ""
+        },
+        "level" : "none",
+        "descriptor" : {
+          "id" : "py/baseline/expected-extracted-files",
+          "index" : 0
+        },
+        "properties" : {
+          "formattedMessage" : {
+            "text" : ""
+          }
+        }
+      } ],
+      "executionSuccessful" : true
+    } ],
+    "artifacts" : [ {
+      "location" : {
+        "uri" : "demo.py",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 0
+      }
+    } ],
+    "results" : [ ],
+    "columnKind" : "unicodeCodePoints",
+    "properties" : {
+      "semmle.formatSpecifier" : "sarif-latest"
+    }
+  } ]
+}

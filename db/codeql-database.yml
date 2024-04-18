@@ -1,0 +1,11 @@
+---
+sourceLocationPrefix: C:\Users\minhd\OneDrive\Desktop\codeql demo
+baselineLinesOfCode: 23
+unicodeNewlines: false
+columnKind: utf32
+primaryLanguage: python
+creationMetadata:
+  sha: bd9f41860d5a7809d2254bc624428e21792ce330
+  cliVersion: 2.17.0
+  creationTime: 2024-04-18T21:06:45.477479600Z
+finalised: true
