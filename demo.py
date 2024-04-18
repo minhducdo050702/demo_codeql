@@ -1,5 +1,17 @@
+#Make a list of functions to increment their arguments by 0 to 9.
+def make_incrementers():
+    result = []
+    for i in range(10):
+        def incrementer(x):
+            return x + i
+        result.append(incrementer)
+    return result
 
-def average(l):
-    return sum(l) / len(l)
-print(average([1.0, 2.0]))  # Prints "1.5".
-print (average([1, 2]))      # Prints "1", which is incorrect.
+#This will fail
+def test():
+    incs = make_incrementers()
+    for x in range(10):
+        for y in range(10):
+            assert incs[x](y) == x+y
+
+test()
