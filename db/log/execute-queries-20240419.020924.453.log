@@ -1,0 +1,823 @@
+[2024-04-19 02:09:24] This is codeql execute queries -J-Xmx1800M --off-heap-ram=1658 --verbosity=progress --logdir=C:\Users\minhd\OneDrive\Desktop\codeql demo\db\log --evaluator-log-level=5 --warnings=show --qlconfig-file=C:\Users\minhd\qlconfig.yml --no-rerun --output=C:\Users\minhd\OneDrive\Desktop\codeql demo\db\results -- C:\Users\minhd\OneDrive\Desktop\codeql demo\db\db-python codeql/python-queries:Functions
+[2024-04-19 02:09:24] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\minhd\qlconfig.yml --format=json -- codeql/python-queries:Functions
+[2024-04-19 02:09:24] [PROGRESS] resolve queries> Recording pack reference codeql/python-queries at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:24] [SPAMMIER] resolve queries> Resolution instruction: queries 'Functions'.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Scanning for QL files at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Found 18 QL files in C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ConsistentReturns.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\DeprecatedSliceMethod.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ExplicitReturnInInit.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlyOverriddenMethod.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlySpecifiedOverriddenMethod.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectRaiseInSpecialMethod.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\InitIsGenerator.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonIterator.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonSelf.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ModificationOfParameterWithDefault.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonCls.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonSelf.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\OverlyComplexDelMethod.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnConsistentTupleSizes.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnValueIgnored.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureOverriddenMethod.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureSpecialMethods.ql.
+[2024-04-19 02:09:24] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\UseImplicitNoneReturnValue.ql.
+[2024-04-19 02:09:24] [DETAILS] resolve queries> Got 18 queries from C:\Users\minhd.
+[2024-04-19 02:09:24] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\ConsistentReturns.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\DeprecatedSliceMethod.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\ExplicitReturnInInit.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\IncorrectlyOverriddenMethod.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\IncorrectlySpecifiedOverriddenMethod.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\IncorrectRaiseInSpecialMethod.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\InitIsGenerator.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\IterReturnsNonIterator.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\IterReturnsNonSelf.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\ModificationOfParameterWithDefault.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\NonCls.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\NonSelf.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\OverlyComplexDelMethod.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\ReturnConsistentTupleSizes.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\ReturnValueIgnored.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\SignatureOverriddenMethod.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\SignatureSpecialMethods.ql",
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\Functions\\UseImplicitNoneReturnValue.ql"
+                      ]
+[2024-04-19 02:09:24] Refusing fancy output: The terminal is not an xterm: 
+[2024-04-19 02:09:24] Creating executor with 1 threads.
+[2024-04-19 02:09:25] Calling plumbing command: codeql resolve extensions --qlconfig-file=C:\Users\minhd\qlconfig.yml codeql/python-queries:Functions
+[2024-04-19 02:09:25] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\minhd\qlconfig.yml --allow-library-packs --format startingpacks -- codeql/python-queries:Functions
+[2024-04-19 02:09:25] [PROGRESS] resolve queries> Recording pack reference codeql/python-queries at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:25] [SPAMMIER] resolve queries> Resolution instruction: queries 'Functions'.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Scanning for QL files at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Found 18 QL files in C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ConsistentReturns.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\DeprecatedSliceMethod.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ExplicitReturnInInit.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlyOverriddenMethod.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlySpecifiedOverriddenMethod.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectRaiseInSpecialMethod.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\InitIsGenerator.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonIterator.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonSelf.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ModificationOfParameterWithDefault.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonCls.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonSelf.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\OverlyComplexDelMethod.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnConsistentTupleSizes.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnValueIgnored.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureOverriddenMethod.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureSpecialMethods.ql.
+[2024-04-19 02:09:25] [SPAMMY] resolve queries> Query Filter: Implicitly including C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\UseImplicitNoneReturnValue.ql.
+[2024-04-19 02:09:25] [DETAILS] resolve queries> Got 18 queries from C:\Users\minhd.
+[2024-04-19 02:09:25] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13"
+                      ]
+[2024-04-19 02:09:25] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=C:\Users\minhd\qlconfig.yml -- C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-queries: not 0.9.13 {root: codeql/python-queries@0.9.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/python-queries: 0.9.13 {codeql/python-queries: not 0.9.13 {root: codeql/python-queries@0.9.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-queries: * [*], codeql/python-all: not * [*] {dependency: codeql/python-queries@* [*] requires codeql/python-all@0.11.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/python-queries@* [*] requires codeql/suite-helpers@0.7.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 1] codeql/python-queries: 0.9.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/suite-helpers: * [*] {codeql/python-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/python-queries@* [*] requires codeql/suite-helpers@0.7.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/python-all: * [*] {codeql/python-queries: * [*], codeql/python-all: not * [*] {dependency: codeql/python-queries@* [*] requires codeql/python-all@0.11.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/python-all@* [*] requires codeql/dataflow@0.2.4}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/mad: not * [*] {dependency: codeql/python-all@* [*] requires codeql/mad@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/regex: not * [*] {dependency: codeql/python-all@* [*] requires codeql/regex@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/python-all@* [*] requires codeql/tutorial@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/util: not * [*] {dependency: codeql/python-all@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/yaml: not * [*] {dependency: codeql/python-all@* [*] requires codeql/yaml@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 2] codeql/python-all: 0.11.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/yaml: * [*] {codeql/python-all: * [*], codeql/yaml: not * [*] {dependency: codeql/python-all@* [*] requires codeql/yaml@0.2.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/util: * [*] {codeql/python-all: * [*], codeql/util: not * [*] {dependency: codeql/python-all@* [*] requires codeql/util@0.2.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/tutorial: * [*] {codeql/python-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/python-all@* [*] requires codeql/tutorial@0.2.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/regex: * [*] {codeql/python-all: * [*], codeql/regex: not * [*] {dependency: codeql/python-all@* [*] requires codeql/regex@0.2.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/mad: * [*] {codeql/python-all: * [*], codeql/mad: not * [*] {dependency: codeql/python-all@* [*] requires codeql/mad@0.2.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/dataflow: * [*] {codeql/python-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/python-all@* [*] requires codeql/dataflow@0.2.4}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 3] codeql/dataflow: 0.2.4
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/typetracking: * [*] {codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.2.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/ssa: * [*] {codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.2.13}}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 4] codeql/mad: 0.2.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/regex: * [*], codeql/util: not * [*] {dependency: codeql/regex@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 5] codeql/regex: 0.2.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/ssa: * [*], codeql/util: not * [*] {dependency: codeql/ssa@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 6] codeql/ssa: 0.2.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 7] codeql/suite-helpers: 0.7.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 8] codeql/tutorial: 0.2.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 9] codeql/typetracking: 0.2.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 10] codeql/util: 0.2.13
+[2024-04-19 02:09:25] [SPAMMY] resolve extensions-by-pack> [DECISION 11] codeql/yaml: 0.2.13
+[2024-04-19 02:09:25] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmle\python\frameworks\data\internal\empty.model.yml.
+[2024-04-19 02:09:25] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/python-all:sourceModel: 0 tuples.
+[2024-04-19 02:09:25] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/python-all:sinkModel: 0 tuples.
+[2024-04-19 02:09:25] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/python-all:summaryModel: 0 tuples.
+[2024-04-19 02:09:25] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/python-all:neutralModel: 0 tuples.
+[2024-04-19 02:09:25] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/python-all:typeModel: 0 tuples.
+[2024-04-19 02:09:25] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/python-all:typeVariableModel: 0 tuples.
+[2024-04-19 02:09:26] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmle\python\frameworks\data\internal\subclass-capture\ALL.model.yml.
+[2024-04-19 02:09:26] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/python-all:typeModel: 58275 tuples.
+[2024-04-19 02:09:26] Plumbing command codeql resolve extensions-by-pack completed:
+                      {
+                        "models" : [ ],
+                        "data" : {
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13" : [
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 2,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "neutralModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 3,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 4,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 5,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\subclass-capture\\ALL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 0,
+                              "rowCount" : 58275,
+                              "predicateHasOrigin" : false
+                            }
+                          ]
+                        },
+                        "threatModels" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2024-04-19 02:09:26] Plumbing command codeql resolve extensions completed:
+                      {
+                        "models" : [ ],
+                        "data" : {
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13" : [
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 2,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "neutralModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 3,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 4,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\empty.model.yml",
+                              "index" : 5,
+                              "firstRowId" : 0,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmle\\python\\frameworks\\data\\internal\\subclass-capture\\ALL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 0,
+                              "rowCount" : 58275,
+                              "predicateHasOrigin" : false
+                            }
+                          ]
+                        },
+                        "threatModels" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ConsistentReturns.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ConsistentReturns.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving library dependencies from C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\qlpack.yml.
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-queries: not 0.9.13 {root: codeql/python-queries@0.9.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/python-queries: 0.9.13 {codeql/python-queries: not 0.9.13 {root: codeql/python-queries@0.9.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-queries: * [*], codeql/python-all: not * [*] {dependency: codeql/python-queries@* [*] requires codeql/python-all@0.11.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/python-queries@* [*] requires codeql/suite-helpers@0.7.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 1] codeql/python-queries: 0.9.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/suite-helpers: * [*] {codeql/python-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/python-queries@* [*] requires codeql/suite-helpers@0.7.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/python-all: * [*] {codeql/python-queries: * [*], codeql/python-all: not * [*] {dependency: codeql/python-queries@* [*] requires codeql/python-all@0.11.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/python-all@* [*] requires codeql/dataflow@0.2.4}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/mad: not * [*] {dependency: codeql/python-all@* [*] requires codeql/mad@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/regex: not * [*] {dependency: codeql/python-all@* [*] requires codeql/regex@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/python-all@* [*] requires codeql/tutorial@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/util: not * [*] {dependency: codeql/python-all@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/python-all: * [*], codeql/yaml: not * [*] {dependency: codeql/python-all@* [*] requires codeql/yaml@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 2] codeql/python-all: 0.11.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/yaml: * [*] {codeql/python-all: * [*], codeql/yaml: not * [*] {dependency: codeql/python-all@* [*] requires codeql/yaml@0.2.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/util: * [*] {codeql/python-all: * [*], codeql/util: not * [*] {dependency: codeql/python-all@* [*] requires codeql/util@0.2.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/tutorial: * [*] {codeql/python-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/python-all@* [*] requires codeql/tutorial@0.2.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/regex: * [*] {codeql/python-all: * [*], codeql/regex: not * [*] {dependency: codeql/python-all@* [*] requires codeql/regex@0.2.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/mad: * [*] {codeql/python-all: * [*], codeql/mad: not * [*] {dependency: codeql/python-all@* [*] requires codeql/mad@0.2.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/dataflow: * [*] {codeql/python-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/python-all@* [*] requires codeql/dataflow@0.2.4}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 3] codeql/dataflow: 0.2.4
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/typetracking: * [*] {codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.2.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DERIVATION] codeql/ssa: * [*] {codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.2.13}}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 4] codeql/mad: 0.2.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/regex: * [*], codeql/util: not * [*] {dependency: codeql/regex@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 5] codeql/regex: 0.2.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/ssa: * [*], codeql/util: not * [*] {dependency: codeql/ssa@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 6] codeql/ssa: 0.2.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 7] codeql/suite-helpers: 0.7.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 8] codeql/tutorial: 0.2.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@0.2.13}
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 9] codeql/typetracking: 0.2.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 10] codeql/util: 0.2.13
+[2024-04-19 02:09:27] [SPAMMY] resolve library-path> [DECISION 11] codeql/yaml: 0.2.13
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 resolved OK.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\ConsistentReturns.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [1/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ConsistentReturns.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\DeprecatedSliceMethod.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\DeprecatedSliceMethod.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\DeprecatedSliceMethod.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [2/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\DeprecatedSliceMethod.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ExplicitReturnInInit.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ExplicitReturnInInit.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\ExplicitReturnInInit.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [3/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ExplicitReturnInInit.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlyOverriddenMethod.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlyOverriddenMethod.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\IncorrectlyOverriddenMethod.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [4/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlyOverriddenMethod.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlySpecifiedOverriddenMethod.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlySpecifiedOverriddenMethod.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\IncorrectlySpecifiedOverriddenMethod.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [5/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectlySpecifiedOverriddenMethod.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectRaiseInSpecialMethod.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectRaiseInSpecialMethod.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\IncorrectRaiseInSpecialMethod.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [6/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IncorrectRaiseInSpecialMethod.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\InitIsGenerator.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\InitIsGenerator.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\InitIsGenerator.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [7/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\InitIsGenerator.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonIterator.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonIterator.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\IterReturnsNonIterator.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [8/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonIterator.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonSelf.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonSelf.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\IterReturnsNonSelf.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [9/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\IterReturnsNonSelf.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ModificationOfParameterWithDefault.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ModificationOfParameterWithDefault.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\ModificationOfParameterWithDefault.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [10/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ModificationOfParameterWithDefault.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonCls.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonCls.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\NonCls.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [11/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonCls.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonSelf.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonSelf.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\NonSelf.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [12/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\NonSelf.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\OverlyComplexDelMethod.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\OverlyComplexDelMethod.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\OverlyComplexDelMethod.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [13/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\OverlyComplexDelMethod.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnConsistentTupleSizes.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnConsistentTupleSizes.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\ReturnConsistentTupleSizes.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [14/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnConsistentTupleSizes.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnValueIgnored.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnValueIgnored.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\ReturnValueIgnored.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [15/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\ReturnValueIgnored.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureOverriddenMethod.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureOverriddenMethod.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\SignatureOverriddenMethod.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [16/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureOverriddenMethod.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureSpecialMethods.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureSpecialMethods.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\SignatureSpecialMethods.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [17/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\SignatureSpecialMethods.ql.
+[2024-04-19 02:09:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\minhd\qlconfig.yml --query=C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\UseImplicitNoneReturnValue.ql --format=json
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\UseImplicitNoneReturnValue.ql.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\minhd\.codeql\compile-cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13 found in cache.
+[2024-04-19 02:09:27] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\.codeql\libraries\codeql\python-all\0.11.13\semmlecode.python.dbscheme.
+[2024-04-19 02:09:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\dataflow\\0.2.4",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\mad\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\regex\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\ssa\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\suite-helpers\\0.7.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\tutorial\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\typetracking\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\util\\0.2.13",
+                          "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\yaml\\0.2.13"
+                        ],
+                        "dbscheme" : "C:\\Users\\minhd\\.codeql\\packages\\codeql\\python-queries\\0.9.13\\.codeql\\libraries\\codeql\\python-all\\0.11.13\\semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "C:\\Users\\minhd\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "codeql\\python-queries\\Functions\\UseImplicitNoneReturnValue.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2024-04-19 02:09:27] [PROGRESS] execute queries> [18/18] No need to rerun C:\Users\minhd\.codeql\packages\codeql\python-queries\0.9.13\Functions\UseImplicitNoneReturnValue.ql.
+[2024-04-19 02:09:27] [PROGRESS] execute queries> Shutting down query evaluator.
+[2024-04-19 02:09:27] Sequence stamp origin is -6194599698774924114
+[2024-04-19 02:09:27] Pausing evaluation to close the cache at sequence stamp o+0
+[2024-04-19 02:09:27] The disk cache is freshly trimmed; leave it be.
+[2024-04-19 02:09:27] Unpausing evaluation
+[2024-04-19 02:09:27] This NaiveBuddyAllocator requested 0 eviction rounds.
+[2024-04-19 02:09:27] Exiting with code 0
