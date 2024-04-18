@@ -11,6 +11,8 @@ def factorial(n):
     else:
         return n * factorial(n - 1)  # Error: Potential stack overflow for large values of n
 
+
+
 def main():
     """Main function"""
     print("Enter two numbers to divide:")
@@ -18,6 +20,10 @@ def main():
     num2 = float(input("Enter the second number: "))
     result = divide(num1, num2)
     print("Result of division:", result)
+    def average(l):
+        return sum(l) / len(l)
+    print(average([1.0, 2.0]))  # Prints "1.5".
+    print (average([1, 2]))      # Prints "1", which is incorrect.
 
     print("Enter a number to calculate its factorial:")
     num = int(input("Enter the number: "))
